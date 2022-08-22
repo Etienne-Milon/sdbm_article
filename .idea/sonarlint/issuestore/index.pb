@@ -1,8 +1,6 @@
 
 _
 /src/main/java/fr/fs/sdbm/dao/ContinentDAO2.java,6\7\67e6070c9c98bd8e76c856a71c42518f12937db0
-U
-%src/main/java/fr/fs/sdbm/dao/DAO.java,1\a\1ae6018646bc0b022a02b9ce035fee81a209129a
 Y
 )src/main/java/fr/fs/sdbm/metier/Pays.java,5\f\5fb81e042f56538002c571053d071838ee744307
 b
@@ -23,10 +21,6 @@ Y
 )src/main/java/fr/fs/sdbm/dao/PaysDAO.java,0\d\0d4d865a3100feee048f06fa807a95eec1bb1c0a
 ^
 .src/main/java/fr/fs/sdbm/dao/SDBMConnect1.java,a\7\a730d20f26a0341bb036614918f378d80fb1c0f6
-^
-.src/main/java/fr/fs/sdbm/dao/SDBMConnect2.java,b\f\bf6fb96a821c452b664da97850553a580f6ea345
-d
-4src/main/java/fr/fs/sdbm/service/ServiceArticle.java,c\e\ce63c44514e410ad887c9f572db94dc1c47a82d5
 c
 3src/main/java/fr/fs/sdbm/service/ServiceMarque.java,1\f\1f764a7c2f2b9c31c7fa9b896d04e7ccf811c157
 ^

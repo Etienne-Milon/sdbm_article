@@ -102,7 +102,10 @@ public class ArticleDAO extends DAO<Article,ArticleSearch>
             else
                pStmt.setInt(7,article.getTypeBiere().getId());
 
-            pStmt.setInt(8,article.getStock());
+            if (article.getStock() == -1)
+                pStmt.setNull(8,Types.INTEGER);
+            else
+                pStmt.setInt(8,article.getStock());
             pStmt.execute();
 
             return true;

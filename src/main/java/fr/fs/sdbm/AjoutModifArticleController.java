@@ -211,9 +211,14 @@ public class AjoutModifArticleController {
         return typeBiere ;
     }
 
+    private <Object> Object testMeethode(TextField textField, String regex){
+        String string = textField.getText();
+        return null;
+    }
+
     private BigDecimal getPrix() {
         BigDecimal bigdec = null;
-        if (prixDAchatTextField.getText() != "" && prixDAchatTextField.getText().matches("^-?\\d*\\.{0,1}\\d+")) {
+        if (prixDAchatTextField.getText() != "" && prixDAchatTextField.getText().matches("^-?\\d*\\.?\\d+")) {
             bigdec = new BigDecimal(prixDAchatTextField.getText());
             prixCorrect = true;
             prixVerif.setText("");

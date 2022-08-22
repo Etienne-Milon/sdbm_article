@@ -85,6 +85,10 @@ public class GestionArticleController {
     @FXML
     private Label stockLabel;
 
+    @FXML
+    private Button updateButton;
+    @FXML
+    private Button deleteButton;
 
     @FXML
     private MenuApp menuApp;
@@ -157,6 +161,10 @@ public class GestionArticleController {
         prixLow.setText(String.valueOf(prixRangeSlider.getLowValue()));
         prixHigh.setText(String.valueOf(prixRangeSlider.getHighValue()));
 
+        // Initialisation des bouttons
+        updateButton.setDisable(true);
+        deleteButton.setDisable(true);
+
 
         // Initialisation des RadioButtons
         volume33.setSelected(true);
@@ -166,6 +174,7 @@ public class GestionArticleController {
         articleTable.getSelectionModel().selectedItemProperty().addListener((observable,oldvalue,newvalue)-> afficherArticle(newvalue));
 
         selectedArticle = articleTable.getSelectionModel().getSelectedItem();
+
     }
 
     private void afficherArticle(Article article) {
@@ -183,6 +192,8 @@ public class GestionArticleController {
         prixLabel.setText(String.valueOf(article.getPrixAchat().doubleValue()));
         stockLabel.setText(String.valueOf(article.getStock()));
         selectedArticle = article;
+        updateButton.setDisable(false);
+        deleteButton.setDisable(false);
         }
     }
 
@@ -199,6 +210,8 @@ public class GestionArticleController {
         prixLabel.setText("");
         stockLabel.setText("");
         selectedArticle = null;
+        updateButton.setDisable(true);
+        deleteButton.setDisable(true);
     }
 
     public void setMenuApp(MenuApp menuApp) {
@@ -271,13 +284,15 @@ public class GestionArticleController {
 
     @FXML
     private void update(){
-        if (selectedArticle !=null)
+        if (selectedArticle !=null) {
             menuApp.showAjoutModifArticle(selectedArticle);
+            resetAfficherArticle();
+        }
     }
     @FXML
     private void create(){
         selectedArticle = null;
-        menuApp.showAjoutModifArticle(selectedArticle);
+        menuApp.showAjoutModifArticle(null);
     }
 
     @FXML
@@ -287,8 +302,9 @@ public class GestionArticleController {
             alert.setTitle("Suppression d'un article");
             alert.setHeaderText("Confirmer la suppression d'un article");
             alert.showAndWait();
-            if (alert.getResult() == ButtonType.OK)
+            if (alert.getResult() == ButtonType.OK){
                 serviceArticle.DeleteArticle(selectedArticle);
+                resetAfficherArticle();}
         }
     }
 }
