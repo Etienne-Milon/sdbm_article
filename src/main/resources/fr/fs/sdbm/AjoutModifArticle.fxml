@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+<?import org.controlsfx.control.SearchableComboBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.fs.sdbm.AjoutModifArticleController">
+   <children>
+      <TextField fx:id="biereTextField" layoutX="135.0" layoutY="45.0" prefHeight="25.0" prefWidth="355.0" />
+      <Text layoutX="50.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom*" />
+      <Text layoutX="50.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type" />
+      <Text layoutX="50.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Titrage" />
+      <TextField fx:id="titrageTextField" layoutX="135.0" layoutY="125.0" prefHeight="25.0" prefWidth="73.0" />
+      <Text layoutX="50.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Marque*" />
+      <Text layoutX="50.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fabricant" />
+      <Text layoutX="50.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pays" />
+      <Text layoutX="50.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Couleur" />
+      <Text layoutX="315.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Volume*" />
+      <Text layoutX="315.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prix d'achat*" />
+      <TextField fx:id="prixDAchatTextField" layoutX="418.0" layoutY="245.0" prefHeight="25.0" prefWidth="73.0" />
+      <Text layoutX="315.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stock initial" />
+      <TextField fx:id="stockInitalTextField" layoutX="418.0" layoutY="285.0" prefHeight="25.0" prefWidth="73.0" />
+      <Button layoutX="389.0" layoutY="348.0" mnemonicParsing="false" onAction="#ValiderArticle" text="Valider" />
+      <Button layoutX="464.0" layoutY="348.0" mnemonicParsing="false" onAction="#Annuler" text="Annuler" />
+      <SearchableComboBox fx:id="paysSCB" layoutX="135.0" layoutY="245.0" prefHeight="25.0" prefWidth="137.0" />
+      <SearchableComboBox fx:id="volumeSCB" layoutX="393.0" layoutY="121.0" prefHeight="25.0" prefWidth="97.0" />
+      <SearchableComboBox fx:id="typeBiereSCB" layoutX="135.0" layoutY="85.0" />
+      <SearchableComboBox fx:id="marqueSCB" layoutX="135.0" layoutY="165.0" />
+      <SearchableComboBox fx:id="fabricantSCB" layoutX="135.0" layoutY="205.0" />
+      <SearchableComboBox fx:id="couleurSCB" layoutX="135.0" layoutY="285.0" prefHeight="25.0" prefWidth="137.0" />
+      <Label fx:id="volumeVerif" layoutX="508.0" layoutY="126.0" />
+      <Label fx:id="nomVerif" layoutX="508.0" layoutY="49.0" />
+      <Label fx:id="marqueVerif" layoutX="407.0" layoutY="169.0" />
+      <Label fx:id="prixVerif" layoutX="508.0" layoutY="249.0" />
+      <Label fx:id="titrageVerif" layoutX="222.0" layoutY="129.0" />
+   </children>
+</AnchorPane>
